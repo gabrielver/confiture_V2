@@ -167,3 +167,148 @@ border-radius: 7000px 7000px 0px 0px;
   z-index: 101;
  background:  #FED135;
 }
+.product_text h1{
+  font-family: 'Josefin Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #292929;
+  padding-bottom: 1rem;
+}
+.product_text h2{
+  max-width: 80%;
+  margin: auto;
+  font-family: sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 18px;
+color: #292929a8;
+padding-bottom: 1rem;
+
+}
+.card{
+  border-radius: 100px;
+}
+p{
+  font-family: 'Josefin Slab';
+  color:#292929a8;
+  font-weight: 700;
+}
+
+/* contact section */
+.contact_title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact_title h1{
+  font-family: 'Josefin Slab';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #292929;
+  text-align: center;
+  padding-top: 1rem;
+}
+.contact_title h2{
+  font-family: 'Josefin Slab';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 16px;
+  color: #292929;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.banderole{
+  width: 100%;
+  background: white;
+  overflow-y: hidden;
+}
+.banderole_inside{
+  background: #FED135 ;
+  width: 100%;
+  margin: 1rem 0;
+  height: 5rem;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  
+}
+.contact_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.template{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+line-height: 18px;
+font-size: 12px;
+padding: 1rem 1rem 0 1rem;
+
+}
+.address{
+  font-weight: 500;
+}
+.address h3, .address h4{
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 12px;
+  text-transform: uppercase;
+} 
+
+ .template .tel{
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.hour p{
+  color: black;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+}
+.hour span{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+}
+.more{
+  background:#FED135;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+.info_sup{
+  font-family: sans-serif;
+  text-align: center;
+}
+.info_sup p{
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: black;
+  text-transform: uppercase;
+}
+.info_sup a{
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+}
