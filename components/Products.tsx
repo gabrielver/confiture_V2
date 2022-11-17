@@ -13,7 +13,7 @@ function Products({}: Props) {
             Les fruits sont sélectionnés avec soin, Pascal se déplace sur le marché de Rungis chaque semaine et nous recherchons des producteurs locaux ou des régions avoisinantes (Normandie, Picardie, ...)
         </h2>
       </div>
-      <div className="cards flex flex-col justify-between pl-4 pr-4 ">
+      <div className="cards  ">
        <div className="cards_up flex justify-around items-center pt-8">
        <div className="card rouge relative  ">
             <div className="ellipse bg-[#fe353530] rounded-full  flex items-center justify-center h-36 w-36 "  >

@@ -14,7 +14,8 @@ function Contact({}: Props) {
             leBonMarche-Biocop-Naturalia-LaGrandeEpicer
           </div>
         </div>
-        <div className='contact_list'>
+       <div className="cont_list">
+       <div className='contact_list'>
             <div className="template ">
               <div className="address">
               <h3>le bon marché</h3>
@@ -88,9 +89,10 @@ function Contact({}: Props) {
             </div>
             
         </div>
+       </div>
         <button className='more'>voir plus</button>
         <div className="info_sup">
-          <p>Pour tout renseignements ou pour devenir l'un de nos point de vente, vous pouvez nous contacter a l'adresse suivante :</p>
+          <p>Pour tout renseignements ou pour devenir l'un de nos partenaires distributeurs, vous pouvez nous contacter a l'adresse suivante :</p>
           <a href="">info@lesconfituredepascal.fr</a>
         </div>
     </div>

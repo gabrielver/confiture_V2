@@ -9,9 +9,9 @@ function Info({}: Props) {
       <div className='text'>
         <div className="left">
         <h2 >Des ingrédients de qualités:</h2>
-        <h3>Du sucre de canne blond biologique
-            Des fruits sélectionnés avec soin (biologique)
-            Des épices bio aussi...
+        <h3>Du sucre de canne blond biologique,
+            Des fruits sélectionnés avec soin (biologique),
+             Des épices bio aussi...
         </h3>
         </div>
         <div className="right"><h4>Toutes nos confitures sont cuites 
