@@ -13,9 +13,10 @@
 html{
 
   scroll-snap-type: y var(--tw-scroll-snap-strictness);
-  --tw-scroll-snap-strictness: mandatory;
+  --tw-scroll-snap-strictness: proximity ;
   overflow-y: scroll;
   overflow-x: hidden;
+ 
 }
 header{
     background: linear-gradient(180deg, rgba(251, 193, 0, 0.66), #F2EBD6 100%);
@@ -161,17 +162,17 @@ border-radius: 7000px 7000px 0px 0px;
 }
 .orange{
   position: absolute;
-  bottom: 3%;
-  left: 5%;
-  scale: 2.5;
+  bottom: -15%;
+  left: -30%;
+  scale: 0.7;
   rotate: -10deg;
  
 }
 .agrum{
   position: absolute;
-  top: 27%;
-  right: 5%;
-  scale: 2.5;
+  top: 11%;
+  right: -30%;
+  scale:0.8;
 }
 @media only screen and (min-width:640px){
   .left{
@@ -190,13 +191,14 @@ border-radius: 7000px 7000px 0px 0px;
     top: 53%;
   }
   .orange{
-    scale: 6;
-    bottom: 15%;
-    left: 8%;
+    scale: 1.2;
+    bottom: -5%;
+    left: 0%;
   }
   .agrum{
-    scale: 6;
-    right: 10%;
+    scale: 1;
+    right: -5%;
+    top: -8%;
   }
   
 }
@@ -226,17 +228,17 @@ border-radius: 7000px 7000px 0px 0px;
 }
 .fraise{
   position: absolute;
-  bottom: 3%;
-  left: 35%;
-  scale: 2.1;
+  bottom: -15%;
+  left: 0%;
+  scale: 0.5;
   rotate: 17deg;
  
 }
 .slice{
   position: absolute;
-  top: 4%;
-  right: 5%;
-  scale: 1.3;
+  top: -10%;
+  right: -15%;
+  scale: 0.4;
   rotate: 220deg;
 }
 @media only screen and (min-width:640px){
@@ -252,16 +254,63 @@ border-radius: 7000px 7000px 0px 0px;
    display: none;
   }
   .slice{
-    scale: 3;
-    top: 8%;
+    scale: 1;
+    top: 0%;
+    right: 0%;
   }
 }
+/* modal section */
+
+.bg-modal{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 2.5px;
+  background: #F2EBD6;
+  border-radius: 7000px 7000px 0px 0px;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.close{
+cursor: pointer;
+background:#D7AF27;
+color: #F2EBD6;
+height: 3rem;
+width: 3rem;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+
+}
+
+
  /* product section  */
 #product{
   z-index: 101;
  background:  #FED135;
  scroll-snap-align: center;
 }
+.bg{
+  position: absolute;
+width: 100%;
+height: 100%;
+left: 0px;
+top: 2.5px;
+background: #F2EBD6;
+border-radius: 7000px 7000px 0px 0px;
+}
+
 .product_text h1{
   font-family: 'Josefin Slab';
   font-style: normal;
@@ -270,7 +319,8 @@ border-radius: 7000px 7000px 0px 0px;
   line-height: 25px;
   text-transform: uppercase;
   color: #292929;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 .product_text h2{
   max-width: 80%;
@@ -290,9 +340,22 @@ padding-bottom: 1rem;
   justify-content: space-between;
   padding: 0 1rem;
 }
+.cards_down {
+  padding-top: 2rem;
+}
 
 .card{
   border-radius: 100px;
+  scale: 0.7;
+  
+ 
+}
+.ellipse{
+  cursor: pointer;
+  z-index: 150;
+}
+.ellipse img{
+  z-index: 100;
 }
 p{
   font-family: 'Josefin Slab';
@@ -316,10 +379,11 @@ p{
     justify-content: center;
     align-items: baseline;
     padding-top: 2rem;
+    
   }
   .card{
-    padding: 7rem;
-    scale: 1.5;
+    padding: 6.5vw;
+    scale: 1.4;
   }
 }
 

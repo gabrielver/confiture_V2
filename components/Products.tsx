@@ -1,9 +1,15 @@
 import Image from 'next/image'
-import React from 'react'
-
+import React, { useState } from 'react'
+import RougeModal from "./RougeModal"
 type Props = {}
 
 function Products({}: Props) {
+
+  
+ const [showRouge, setShowRouge] = useState(false); 
+
+
+
   return (
     <div id='product' className='relative flex min-h-screen overflow-hidden '>
       <div className="bg flex-col justify-center items-center">
@@ -15,9 +21,9 @@ function Products({}: Props) {
       </div>
       <div className="cards  ">
        <div className="cards_up flex justify-around items-center pt-8">
-       <div className="card rouge relative  ">
-            <div className="ellipse bg-[#fe353530] rounded-full  flex items-center justify-center h-36 w-36 "  >
-              <Image className='flex scale-[2.5] mix-blend-multiply' src="/fruit_rouge.png" alt="pot" height={100} width={100} />
+       <div className="card rouge relative " >
+            <div className="ellipse bg-[#fe353530] rounded-full  flex items-center justify-center h-36 w-36 " onClick={() => setShowRouge(true)}  >
+              <img className='flex scale-[2.5] mix-blend-multiply' src="/fruit_rouge.png" alt="pot"  />
             </div>
             <button className="product_title  w-full rounded-b-sm p-1 mt-3 ">
               <p>Fruits Rouge</p>
@@ -26,7 +32,7 @@ function Products({}: Props) {
         </div>
         <div className="card verger relative min-w-[120px] ">
             <div className="ellipse bg-yellow-100 rounded-full flex items-center justify-center h-36 w-36  "  >
-              <Image className='flex scale-[2.5] mix-blend-luminosity' src="/_verger.png" alt="pot" height={100} width={100} />
+              <img className='flex scale-[2.5] mix-blend-luminosity' src="/_verger.png" alt="pot" />
             </div>
             <button className="product_title w-full rounded-b-sm p-1 mt-3  ">
               <p>Fruits du Verger</p>
@@ -38,7 +44,7 @@ function Products({}: Props) {
        <div className="cards_down flex justify-around items-center pt-20">
        <div className="card rouge relative min-w-[120px]">
             <div className="ellipse bg-orange-200 rounded-full flex items-center justify-center h-36 w-36  "  >
-              <Image className='flex scale-[2.5] mix-blend-luminosity' src="/_agrumes.png" alt="pot" height={100} width={100} />
+              <img className='flex scale-[2.5] mix-blend-luminosity' src="/_agrumes.png" alt="pot"  />
             </div>
             <button className="product_title w-full rounded-b-sm p-1 mt-3 ">
               <p>Agrumes</p>
@@ -47,7 +53,7 @@ function Products({}: Props) {
         </div>
         <div className="card green relative min-w-[120px] ">
             <div className="ellipse bg-[#d970ff2f] rounded-full flex items-center justify-center h-36 w-36   "  >
-              <Image className='flex scale-[2.5] mix-blend-luminosity' src="/_meli_melo.png" alt="pot" height={100} width={100} />
+              <img className='flex scale-[2.5] mix-blend-luminosity' src="/_meli_melo.png" alt="pot"  />
             </div>
             <button className="product_title w-full rounded-b-sm p-1 mt-3  ">
               <p>Méli-Mélo</p>
@@ -59,6 +65,7 @@ function Products({}: Props) {
        </div>
       </div>
       </div>
+      {showRouge && (< RougeModal openRouge={setShowRouge}/>)}
    
     </div>
   )

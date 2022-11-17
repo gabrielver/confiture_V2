@@ -18,8 +18,8 @@ function Info({}: Props) {
 dans des bassines de cuivre traditionnelles et fabriqué à Puteaux,
 en Ile de France</h4></div>
       </div>
-      <Image className='agrum' src="/agrum.png" width={100} height={100} alt='agrum' />
-      <Image className='orange' src="/orange.png" width={100} height={100} alt='orange' />
+      <img className='agrum' src="/agrum.png"  alt='agrum' />
+      <img className='orange' src="/orange.png"  alt='orange' />
     </div>
   )
 }

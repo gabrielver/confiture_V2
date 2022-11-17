@@ -14,7 +14,7 @@ function InfoBis({}: Props) {
       scrollTrigger: {
         trigger: "#infobis",
         // markers: { startColor: "blue", endColor: "blue" },
-        // scrub: true,
+        scrub: true,
         start: "-40%",
         end: "40%",
       },
@@ -30,7 +30,7 @@ function InfoBis({}: Props) {
       scrollTrigger: {
         trigger: "#infobis",
         // markers: { startColor: "pink", endColor: "pink" },
-        // scrub: true,
+        scrub: true,
         start: "-20%",
         end: "60%",
       },
@@ -51,8 +51,8 @@ function InfoBis({}: Props) {
         </h3>
         <h4 className='highlight'>C'est le souvenir des confitures consommées à la campagne chez ses grands parents, le goût des bonnes choses et l'influence de ses amis qui ont poussé Pascal dans cette aventure.</h4>
       </div>
-      <Image className='fraise' src="/fraise.png" width={100} height={100} alt='fraise' />
-      <Image className='slice' src="/slice.png" width={100} height={100} alt='slice' />
+      <img className='fraise' src="/fraise.png"  alt='fraise' />
+      <img className='slice' src="/slice.png"  alt='slice' />
     </div>
   )
 }

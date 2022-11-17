@@ -14,11 +14,11 @@ function Hero({}: Props) {
         <p className=' text-white  '>Des confitures artisanales gourmandes BIO confectionnées avec passion comme les réalisaient nos grands mères.</p>
        </div>
         <div className="img_fruit pt-20 pl-10">
-          <Image src="/Group_fruit.png" width={100} height={100} alt={'dessin de fruit'}/>
+          <img src="/Group_fruit.png" width={100} height={100} alt={'dessin de fruit'}/>
         </div>
       </div>
-      <Image className='arrow' src="/arrow.png" width={100} height={100} alt='arrow' />
-      <Image className='circle' src="/Ellipse.png" width={100} height={100} alt='circle' />
+      <img className='arrow' src="/arrow.png" width={100} height={100} alt='arrow' />
+      <img className='circle' src="/Ellipse.png" width={100} height={100} alt='circle' />
     </div>
   )
 }
