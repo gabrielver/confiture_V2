@@ -1,8 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/Header'
-
-import Base from '../components/Base'
 import Base2 from '../components/Base2'
 import Products from '../components/Products'
 import Contact from '../components/Contact'
