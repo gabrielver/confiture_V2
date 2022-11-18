@@ -4,6 +4,7 @@ import Info from "./Info";
 import InfoBis from "./InfoBis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { start } from "repl";
 
 //const ScrollTrigger = dynamic(import("gsap/ScrollTrigger") as any, {ssr: false});
 gsap.registerPlugin(ScrollTrigger)
@@ -22,7 +23,7 @@ function Base2() {
   `webp/${(index + 1).toString().padStart(5, '0')}.webp`
 );
 
-const images: CanvasImageSource[] = []
+const images = []
 const confiture = {
   frame: 0
 };
@@ -34,6 +35,10 @@ for (let i = 0; i < frameCount; i++) {
   images.push(img);
 }
 
+const anim = function render() {
+  context!.clearRect(0, 0, canvas.width , canvas.height);
+  context!.drawImage(images[confiture.frame], 0, 0); 
+}
 
 gsap.to(confiture, {
   frame: frameCount -1,
@@ -42,22 +47,17 @@ gsap.to(confiture, {
   scrollTrigger: {
     trigger:".main-container",
     scrub: 1,
-
     start: "top top",
     end: "bottom bottom"
-
-
   },
-  onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
+  onUpdate: anim // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-images[0].onload = render();
+
+images[0].onLoad = anim;
 
 
-function render() {
-  context!.clearRect(0, 0, canvas.width , canvas.height);
-  context!.drawImage(images[confiture.frame], 0, 0); 
-}
+
   }
   return (
     <div className="main-container">

@@ -1,15 +1,15 @@
 import React from 'react'
 
- type Props = {openRouge: any}
+ type Props = {openMeli: any}
 
- function RougeModal({openRouge}: Props) {
+ function MeliModal({openMeli}: Props) {
 
     return (
             <div className="bg-modal">
             <div className="modal-content">
-            <div className="close z-50" onClick={() => openRouge(false)}>X</div>
-            <img className='flex scale-75 absolute top-[0%] mix-blend-multiply' src="/fruit_rouge.png" alt="pot"  />
-              <h4>Nos confitures Aux fruits Rouges</h4>
+            <div className="close z-50" onClick={() => openMeli(false)}>X</div>
+            <img className='flex scale-75 absolute top-[0%] mix-blend-multiply' src="/_meli_melo.png" alt="pot"  />
+              <h4>Nos confitures Meli-Melo</h4>
               <p>Confiture de Fraise</p>
               <p>Confiture de Cerise</p>
               <p>Confiture de Framboise</p>
@@ -24,4 +24,4 @@ import React from 'react'
     )
 }
 
-export default RougeModal
+export default MeliModal

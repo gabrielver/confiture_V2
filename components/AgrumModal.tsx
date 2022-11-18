@@ -1,15 +1,15 @@
 import React from 'react'
 
- type Props = {openRouge: any}
+ type Props = {openAgrum: any}
 
- function RougeModal({openRouge}: Props) {
+ function AgrumModal({openAgrum}: Props) {
 
     return (
             <div className="bg-modal">
             <div className="modal-content">
-            <div className="close z-50" onClick={() => openRouge(false)}>X</div>
-            <img className='flex scale-75 absolute top-[0%] mix-blend-multiply' src="/fruit_rouge.png" alt="pot"  />
-              <h4>Nos confitures Aux fruits Rouges</h4>
+            <div className="close z-50" onClick={() => openAgrum(false)}>X</div>
+            <img className='flex scale-75 absolute top-[0%] mix-blend-multiply' src="/_agrumes.png" alt="pot"  />
+              <h4>Nos confitures Aux Agrumes</h4>
               <p>Confiture de Fraise</p>
               <p>Confiture de Cerise</p>
               <p>Confiture de Framboise</p>
@@ -24,4 +24,4 @@ import React from 'react'
     )
 }
 
-export default RougeModal
+export default AgrumModal

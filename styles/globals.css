@@ -49,6 +49,7 @@ canvas {
       color: #D7AF27;
       font-size: 3rem;
       line-height: 1;
+      z-index: 2;
   }
   .bg{
     position: absolute;
@@ -73,7 +74,7 @@ border-radius: 7000px 7000px 0px 0px;
   }
   .arrow{
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     right: 5%;
     scale: 0.8;
     rotate: 10deg;
@@ -85,6 +86,14 @@ border-radius: 7000px 7000px 0px 0px;
     scale: 1.2;
     z-index: 10;
   }
+  .melo{
+    position: absolute;
+    top: 0%;
+    scale: 0.75;
+    left: -0%;
+    z-index: 1;
+    opacity: 0.5;
+  }
 
   @media only screen and (min-width:640px){
     h1{
@@ -93,8 +102,8 @@ border-radius: 7000px 7000px 0px 0px;
     }
     .banner{
       margin-top: 9rem;
-      min-height: 35rem;
-      max-width: 69vw;
+      min-height: 30rem;
+      max-width: 65vw;
     }
   
     .banner p{
@@ -109,7 +118,7 @@ border-radius: 7000px 7000px 0px 0px;
 
     }
     .img_fruit img{
-      scale: 7;  
+      scale: 6.5;  
      }
      .circle{
       scale: 6;
@@ -118,6 +127,10 @@ border-radius: 7000px 7000px 0px 0px;
      }
      .arrow{
       scale: 1.1;
+    }
+    .melo{
+      top: -18%;
+      scale: 0.5;
     }
 
   }
@@ -258,6 +271,12 @@ border-radius: 7000px 7000px 0px 0px;
     top: 0%;
     right: 0%;
   }
+  .modal-content img{
+  top: -20%;
+  }
+  .modal-content h4{
+    font-size: 2rem;
+  }
 }
 /* modal section */
 
@@ -280,6 +299,10 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+.modal-content h4{
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
 .close{
 cursor: pointer;
 background:#D7AF27;
@@ -291,8 +314,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 font-size: 1.5rem;
-
 }
+
 
 
  /* product section  */
@@ -347,7 +370,7 @@ padding-bottom: 1rem;
 .card{
   border-radius: 100px;
   scale: 0.7;
-  
+  padding: 0 1rem;
  
 }
 .ellipse{
@@ -391,6 +414,8 @@ p{
 /* contact section */
 #contact{
  scroll-snap-align: center;
+
+overflow: hidden;
 }
 .contact_title{
   display: flex;
@@ -420,26 +445,52 @@ p{
 }
 
 .banderole{
-  width: 100%;
+  
   background: white;
-  overflow-y: hidden;
+  padding: 1rem 0;
+  width: max-content;
+ 
+  /* overflow-y: hidden; */
 }
-.banderole_inside{
-  background: #FED135 ;
-  width: 100%;
-  margin: 1rem 0;
-  height: 5rem;
-  color: black;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  overflow-y: hidden;
+.banderole > * {
+ max-height: 5rem;
+  display: inline-block;
+  animation: titleSmall 25s infinite linear;
   
 }
+
+@keyframes titleSmall {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-1289.69px);}
+}
+.cont_list{
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+  --tw-scroll-snap-strictness: proximity ;
+  overflow-x: scroll;
+ overflow-y: hidden;
+ width: 100% ;
+ max-height: 50vh;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.page{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  width: 100vw;
+}
+
 .contact_list{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  padding: 0 1rem;
  
 }
 
@@ -484,10 +535,20 @@ padding: 1rem 1rem 0 1rem;
   line-height: 12px;
 }
 .more{
-  background:#FED135;
-  padding: 0.25rem 0.5rem;
+  background:#fed2356c;
+  padding: 0.25rem 0.75rem;
   border-radius: 20px;
   margin: 1rem 0;
+  scale: 0.5;
+  
+}
+.more img{
+  animation: arrow 2s ease-in-out infinite;
+}
+@keyframes arrow {
+  0% {transform: translateX(5px);}
+  50% {transform: translateX(-5px);}
+  100% {transform: translateX(5px);}
 }
 .info_sup{
   font-family: sans-serif;
@@ -522,13 +583,35 @@ padding: 1rem 1rem 0 1rem;
   .banderole_inside{
     height: 8rem;
   }
-  .cont_list{
-    display: flex;
-    align-items: center;
+  .banderole > * {
+    max-height: max-content;
+    animation: titleBig 25s infinite linear;
   }
+  @keyframes titleBig {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-2660px);}
+  }
+  .cont_list{
+    padding-top: 2rem;
+   justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+ .page{
+  justify-content: center;
+  width: max-content;
+ }
+  .contact_list{
+    flex-direction: row;
+  padding: 0;
+  }
+
   .template{
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     scale: 1.2;
+  }
+  .more{
+    display: none;
   }
   .info_sup{
     padding-top: 10rem;

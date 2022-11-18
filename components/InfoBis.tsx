@@ -25,6 +25,20 @@ function InfoBis({}: Props) {
       { color: "rgba(255,255,255, 0.4" },
       { color: "rgba(255,255,255, 1.5", stagger: 1 }
     );
+    const removeConf = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#infobis",
+        // markers: { startColor: "blue", endColor: "blue" },
+        scrub: true,
+        start: "-40%",
+        end: "40%",
+      },
+    });
+    removeConf.fromTo(
+      "#hero-lightpass",
+      {opacity: "1" },
+      { opacity: "0" }
+    );
     
     const tlHRemove = gsap.timeline({
       scrollTrigger: {

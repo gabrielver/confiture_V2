@@ -4,13 +4,13 @@ type Props = {}
 
 function Header({}: Props) {
   return (
-    <header className='sticky top-0 flex items-start justify-between mx-auto min-w-full z-20 pr-5 pl-5  bg-gradient-from:rgba(251, 193, 0, 0) to:rgba(251, 193, 0, 0.66/0)'>       
-            <p className='text-white pl-5'>Logo</p>
-            <div className='flex items-center content-center '>
+    <header className='sticky top-0 flex items-start justify-center mx-auto min-w-full z-20 pr-2 pl-2  bg-gradient-from:rgba(251, 193, 0, 0) to:rgba(251, 193, 0, 0.66/0)'>       
+            <p className='text-white text-lg pl-5'>Les confitures de Pascal</p>
+            {/* <div className='flex items-center content-center '>
                 <a className='pr-5 pt-0 text-white text-sm sm:text-xl '>Nos Valeurs</a>
                 <a className='pr-5 pt-0 text-white text-sm sm:text-xl'>Les confitures</a>
                 <a className='pr-0  text-white text-sm sm:text-xl'>Nous Trouvez</a>
-            </div>
+            </div> */}
     </header>
   )
 }
