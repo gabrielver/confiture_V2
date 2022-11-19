@@ -11,13 +11,21 @@
     
 }
 html{
-
-  scroll-snap-type: y var(--tw-scroll-snap-strictness);
-  --tw-scroll-snap-strictness: proximity ;
-  overflow-y: scroll;
-  overflow-x: hidden;
- 
+  scroll-behavior: smooth;
 }
+
+@media only screen and (min-width:640px){
+
+  html{
+    scroll-snap-type: y var(--tw-scroll-snap-strictness);
+    --tw-scroll-snap-strictness: proximity ;
+    overflow-y: scroll;
+    overflow-x: hidden;
+   
+  
+  }
+}
+
 header{
     background: linear-gradient(180deg, rgba(251, 193, 0, 0.66), #F2EBD6 100%);
   }
@@ -140,7 +148,7 @@ border-radius: 7000px 7000px 0px 0px;
 
   #info{
     background: linear-gradient(357.78deg, #FED135 1.86%, #F2EBD6 98.18%);
-    overflow: hidden;
+    overflow-x: hidden;
     scroll-snap-align: center;
   }
 .left{
@@ -188,6 +196,9 @@ border-radius: 7000px 7000px 0px 0px;
   scale:0.8;
 }
 @media only screen and (min-width:640px){
+  #info{
+    overflow: hidden;
+  }
   .left{
     font-size: 2.5rem;
     max-width: 40%;

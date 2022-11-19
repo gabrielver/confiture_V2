@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
  type Props = {openVerger: any}
@@ -8,7 +9,8 @@ import React from 'react'
             <div className="bg-modal">
             <div className="modal-content">
             <div className="close z-50" onClick={() => openVerger(false)}>X</div>
-            <img className='flex scale-75 absolute top-[0%] mix-blend-multiply' src="/_verger.png" alt="pot"  />
+            {/* <img className='flex scale-75 absolute top-[0%] mix-blend-multiply' src="/_verger.png" alt="pot"  /> */}
+            <Image className='flex scale-75 absolute top-[0%] mix-blend-multiply' src="/_verger.png" width={900} height={704} alt="pot"  />
               <h4 className='max-w-[90%] m-auto text-center'>Nos confitures Aux fruits du Verger</h4>
               <p>Confiture de Fraise</p>
               <p>Confiture de Cerise</p>
