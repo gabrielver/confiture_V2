@@ -12,26 +12,19 @@
 }
 html{
   scroll-behavior: smooth;
-}
-
-@media only screen and (min-width:640px){
-
-  html{
-    scroll-snap-type: y var(--tw-scroll-snap-strictness);
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
     --tw-scroll-snap-strictness: proximity ;
     overflow-y: scroll;
     overflow-x: hidden;
-   
-  
-  }
 }
+
+
 
 header{
     background: linear-gradient(180deg, rgba(251, 193, 0, 0.66), #F2EBD6 100%);
   }
 .main-container{
     min-height: 100vh;
-   
 }
 canvas {
     position: fixed;
@@ -50,7 +43,7 @@ canvas {
 
   /* hero section */
 #hero{
-  scroll-snap-align: start;
+  scroll-snap-align: none;
 }
   h1{
       font-family: 'Josefin Slab', serif;
@@ -104,6 +97,9 @@ border-radius: 7000px 7000px 0px 0px;
   }
 
   @media only screen and (min-width:640px){
+    #hero{
+      scroll-snap-align: start;
+    }
     h1{
       font-size: 90px;
    
@@ -148,8 +144,9 @@ border-radius: 7000px 7000px 0px 0px;
 
   #info{
     background: linear-gradient(357.78deg, #FED135 1.86%, #F2EBD6 98.18%);
-    overflow-x: hidden;
-    scroll-snap-align: center;
+    overflow: hidden;
+    scroll-snap-align: none;
+    
   }
 .left{
   text-transform: uppercase;
@@ -198,6 +195,7 @@ border-radius: 7000px 7000px 0px 0px;
 @media only screen and (min-width:640px){
   #info{
     overflow: hidden;
+    scroll-snap-align: center;
   }
   .left{
     font-size: 2.5rem;
@@ -230,7 +228,7 @@ border-radius: 7000px 7000px 0px 0px;
 #infobis{
   background: #FED135;
   overflow: hidden;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 .text_info{
   text-transform: uppercase;
@@ -266,6 +264,9 @@ border-radius: 7000px 7000px 0px 0px;
   rotate: 220deg;
 }
 @media only screen and (min-width:640px){
+  /* #infobis{
+    scroll-snap-align: start;
+  } */
   .text_info{
     font-size: 2.8rem;
     line-height: 5rem;
@@ -303,6 +304,8 @@ border-radius: 7000px 7000px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 }
 .modal-content{
 display: flex;
@@ -397,6 +400,7 @@ p{
   font-weight: 700;
 }
 @media only screen and (min-width:640px){
+  
   .product_text h1{
     font-size: 3.5rem;
     padding-top: 8rem;
@@ -424,7 +428,7 @@ p{
 
 /* contact section */
 #contact{
- scroll-snap-align: center;
+ scroll-snap-align: end;
 
 overflow: hidden;
 }
